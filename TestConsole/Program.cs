@@ -6,16 +6,13 @@ namespace TestConsole
     {
         static void Main()
         {
-            double x = 0.1, eps = 0.01, z1 = 1, S = 0;
-            int fact = 1, i = 1;
-            while (Math.Abs(z1) > eps)
-            {
-                z1 = Math.Pow(x, i);
-                fact *= i++;
-                z1 /= fact;
-                S += z1;
-            }
-            Console.WriteLine(++S);
+            int[] arr = {1,2,3,4,5,6,7,8,9};
+    int sum = 0, count = 0;
+    for(int i = 1 ; i < arr.Length ; i += 2){
+        sum += arr[i];
+        count++;
+    }
+    Console.WriteLine((double)sum / count);
         }
     }
 }
